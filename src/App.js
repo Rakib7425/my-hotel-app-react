@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <main className='w-full md:max-w-[90vw] mx-auto'>
+      <main className='w-full md:max-w-[90vw] sm:w-[98vw] sm:text-center mx-auto'>
         <Routes>
           <Route path='/' element={<MainHome />} />
           <Route path='/hotels/:hotel' element={<HotelPage />} />
