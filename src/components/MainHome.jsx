@@ -28,7 +28,7 @@ const MainHome = () => {
                 {data &&
                     data.map((item) => {
                         return (
-                            <Link key={item?.id} className='bg-purple-600 rounded-md' to={`/hotels/${item?.slug}`}>
+                            <Link key={item?.id} className='bg-purple-600 rounded-md hover:scale-105 duration-200' to={`/hotels/${item?.slug}`}>
 
                                 <Card hotelName={item?.name} img={item?.thumbnail ? item?.thumbnail : `https://a0.muscache.com/im/pictures/miso/Hosting-729597790487190657/original/d96f67a7-39f3-46ab-a341-e3b57b2b1c2f.jpeg?im_w=720`} slug={item?.slug} />
                             </Link>
