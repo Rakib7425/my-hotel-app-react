@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { IoStar } from 'react-icons/io5';
+// import { IoStar } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
 
 const HotelPage = () => {
