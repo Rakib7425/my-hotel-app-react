@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { IoStar } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
 
 const HotelPage = () => {
@@ -21,7 +22,6 @@ const HotelPage = () => {
     return (
         <div>
             <h1 className="text-white text-2xl font-semibold mt-12">Hotel {hotel}</h1>
-
             {/* {data && data.map((item) => {
                 return (
                     <h2 className='text-purple-500 text-xl'>{item.address}</h2>
@@ -29,7 +29,17 @@ const HotelPage = () => {
                     )
                 })
             } */}
+
+
             <h2 className='text-purple-500 text-xl'>{data.address}</h2>
+
+
+            {/* Rating Section */}
+
+            {/* <div className='flex items-center justify-start'>
+
+                <span className='text-purple-500 text-xl font-semibold'><IoStar size={30} color='pink' className='inline-block ' /> {data?.rating} / 5.0</span>
+            </div> */}
 
             <div className='flex gap-4 flex-wrap justify-between mt-6'>
 
