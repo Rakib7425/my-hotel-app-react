@@ -23,7 +23,7 @@ const MainHome = () => {
 
     return (
         <>
-            <h1 className='text-3xl font-semibold text-white my-4'>Select Your Hotel & Book your stay 😍</h1>
+            <h1 className='text-3xl font-semibold text-white my-4 text-start'>Select Your Hotel & Book your stay 😍</h1>
             <div className='flex flex-wrap gap-4 justify-between'>
                 {data &&
                     data.map((item) => {

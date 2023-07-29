@@ -20,7 +20,7 @@ const HotelPage = () => {
         // eslint-disable-next-line
     }, [])
     return (
-        <div>
+        <div className='text-start'>
             <h1 className="text-white text-2xl font-semibold mt-12">Hotel {hotel}</h1>
             {/* {data && data.map((item) => {
                 return (
@@ -34,7 +34,7 @@ const HotelPage = () => {
             <h2 className='text-purple-500 text-xl'>{data.address}</h2>
 
 
-            {/* Rating Section */}
+            {/* !Rating Section */}
 
             {/* <div className='flex items-center justify-start'>
 
@@ -53,8 +53,8 @@ const HotelPage = () => {
             </div>
             <div className='my-6'>
 
-                <span className='text-2xl font-semibold text-white'>About The Place</span>
-                <h2 className='font-semibold text-white'>{data.aboutThePlace}</h2>
+                <span className='text-2xl font-semibold text-white underline'>About The Place</span>
+                <h2 className='font-semibold text-white mt-2'>{data.aboutThePlace}</h2>
             </div>
         </div>
     )
