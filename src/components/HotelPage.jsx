@@ -24,7 +24,7 @@ const HotelPage = () => {
     }, [])
     return (
         <div className='text-start'>
-            <h1 className="text-white text-2xl font-semibold mt-12">Hotel {hotel}</h1>
+            <h1 className="text-white text-2xl font-semibold mt-6">Hotel-{hotel}</h1>
             <h2 className='text-purple-500 text-xl'>{data.address}</h2>
 
 

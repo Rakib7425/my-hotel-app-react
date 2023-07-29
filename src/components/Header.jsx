@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Header = () => {
 
-    const [isNavVisible, setIsNavVisible] = useState(true);
-    const toggleNav = () => {
-        setIsNavVisible(!isNavVisible);
-    };
+    // const [isNavVisible, setIsNavVisible] = useState(true);
+    // const toggleNav = () => {
+    //     setIsNavVisible(!isNavVisible);
+    // };
 
     return (
-        <header className='flex flex-col md:flex-row items-center justify-between px-4 h-14 text-center shadow-2xl bg-[#4B0082] mb-2 text-white'>
+        <header className='flex flex-col md:flex-row items-center justify-between px-4 h-14 text-center shadow-2xl bg-[#4B0082] mb-2 text-white w-full sticky top-0 z-10'>
             <div className='text-3xl font-bold'>
                 <Link to={'/'} className='hover:text-gray-400 duration-100'>Hotelians</Link>
             </div>
