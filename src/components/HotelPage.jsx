@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import TopFeatures from './TopFeatures';
 import AboutThePlace from './AboutThePlace';
 import HotelImages from './HotelImages';
+import Modal from './Modal';
 
 const HotelPage = () => {
     const { hotel } = useParams();
@@ -46,7 +47,10 @@ const HotelPage = () => {
             </div>
             <div className="top-features">
                 <TopFeatures data={data} />
+
+
             </div>
+            <Modal text={'Book now'} />
         </div>
     )
 }

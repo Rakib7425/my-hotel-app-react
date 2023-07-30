@@ -19,9 +19,7 @@ const TopFeatures = ({ data }) => {
                         )
                     })}
                 </div>
-                <div className=' flex w-full items-end justify-start right-0'>
-                    <button className='bg-green-600 py-2 px-6 rounded-lg hover:bg-transparent text-white border-r-orange-300 border hover:text-green-400 duration-200 text-lg'>Book now</button>
-                </div>
+
             </div>
 
         </>
