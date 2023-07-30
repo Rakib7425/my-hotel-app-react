@@ -43,14 +43,13 @@ const HotelPage = () => {
             </div>
             <div className='my-6'>
                 <AboutThePlace data={data} />
-
             </div>
             <div className="top-features">
                 <TopFeatures data={data} />
-
-
             </div>
-            <Modal text={'Book now'} />
+            <div>
+                <Modal text={'Book now'} />
+            </div>
         </div>
     )
 }

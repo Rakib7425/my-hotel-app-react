@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import MainHome from './components/MainHome'
 import HotelPage from './components/HotelPage'
+import UseScrollToTop from './components/useScrollToTop'
 
 const App = () => {
   return (
@@ -14,6 +15,9 @@ const App = () => {
           <Route path='/hotels/:hotel' element={<HotelPage />} />
 
         </Routes>
+        <div className='flex justify-end z-50 relative'>
+          <UseScrollToTop />
+        </div>
       </main>
     </>
   )
