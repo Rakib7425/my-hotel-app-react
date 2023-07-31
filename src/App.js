@@ -15,10 +15,11 @@ const App = () => {
           <Route path='/hotels/:hotel' element={<HotelPage />} />
 
         </Routes>
-        <div className='flex justify-end z-50 relative'>
+        <div className='flex justify-end sticky bottom-10 right-5'>
           <UseScrollToTop />
         </div>
       </main>
+
     </>
   )
 }

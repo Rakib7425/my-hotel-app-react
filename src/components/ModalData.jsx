@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
+import DateRangeCalendarValue from './BasicDateRangeCalendar';
 
 const ModalData = ({ setShowModal, onClose, onRequest }) => {
 
@@ -20,7 +21,7 @@ const ModalData = ({ setShowModal, onClose, onRequest }) => {
                     <div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative  bg-green-400">
                         <div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
                             <h5 className=" text-primary-dark dark:text-primary-light text-xl">
-                                Select a date & Book your Stay
+                                Select a date & Book your Stay -
                             </h5>
                             <button
                                 onClick={() => { setShowModal(false) }}
@@ -46,6 +47,9 @@ const ModalData = ({ setShowModal, onClose, onRequest }) => {
                                         placeholder="Name"
                                         aria-label="Name"
                                     />
+                                </div>
+                                <div>
+                                    {/* <DateRangeCalendarValue /> */}
                                 </div>
                                 <div className="mt-6">
                                     <input
@@ -86,7 +90,7 @@ const ModalData = ({ setShowModal, onClose, onRequest }) => {
                                         cols="14"
                                         rows="6"
                                         aria-label="Details"
-                                        placeholder="Project description"
+                                        placeholder="Details"
                                     ></textarea>
                                 </div>
 
@@ -106,7 +110,7 @@ const ModalData = ({ setShowModal, onClose, onRequest }) => {
                                         aria-label="Submit Request"
                                     >
                                         {/* <Button title="Send Request" /> */}
-                                        <button>Submit</button>
+                                        <button>Submit Request</button>
                                     </span>
                                 </div>
                             </form>

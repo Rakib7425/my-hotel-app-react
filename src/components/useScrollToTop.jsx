@@ -15,7 +15,7 @@ const useScrollToTop = () => {
 	});
 
 	const scrollToTop = () => {
-		if (!showScroll && window.window.scrollY > 400) {
+		if (!showScroll && window.window.scrollY > 200) {
 			setShowScroll(true);
 		} else if (showScroll && window.window.scrollY <= 400) {
 			setShowScroll(false);
@@ -46,6 +46,8 @@ const useScrollToTop = () => {
 					display: showScroll ? 'flex' : 'none',
 					padding: 5,
 					backgroundColor: 'black',
+					cursor: 'pointer',
+
 				}}
 			/>
 		</>
