@@ -1,21 +1,40 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Header from './components/Header'
 import MainHome from './components/MainHome'
 import HotelPage from './components/HotelPage'
 import UseScrollToTop from './components/useScrollToTop'
 import { useAuth } from './contexts/auth'
+import Login from './components/Login/Login'
+import { ToastContainer } from 'react-toastify'
+import SignUp from './components/SignUp/SignUp'
 
 const App = () => {
   const currUser = useAuth();
-  console.log(currUser);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!currUser.authUser) {
+      navigate('/login')
+    }
+
+    // eslint-disable-next-line
+  }, [currUser.authUser])
+
+
+  console.log(currUser.authUser);
 
   return (
     <>
-      <Header />
+      {currUser ? <Header /> : ''}
+
+
       <main className='w-full md:max-w-[90vw] sm:w-[98vw] sm:text-center mx-auto'>
+        <ToastContainer />
         <Routes>
           <Route path='/' element={<MainHome />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/sign-up' element={<SignUp />} />
           <Route path='/hotels/:hotel' element={<HotelPage />} />
 
         </Routes>
