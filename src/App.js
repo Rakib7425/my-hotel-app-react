@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Header from './components/Header'
 import MainHome from './components/MainHome'
@@ -8,26 +8,37 @@ import { useAuth } from './contexts/auth'
 import Login from './components/Login/Login'
 import { ToastContainer } from 'react-toastify'
 import SignUp from './components/SignUp/SignUp'
+import { getAuth } from 'firebase/auth'
 
 const App = () => {
-  const currUser = useAuth();
+  const { authUser, isLoading } = useAuth();
   const navigate = useNavigate();
+  const [showHeader, setShowHeader] = useState(false);
+
+  const auth = getAuth();
+  console.log(auth.idTokenSubscription.auth.currentUser);
 
   useEffect(() => {
-    if (!currUser.authUser) {
+    if (!authUser) {
       navigate('/login')
     }
 
     // eslint-disable-next-line
-  }, [currUser.authUser])
+  }, [authUser])
 
 
-  console.log(currUser.authUser);
+  console.log(authUser, isLoading);
+  useEffect(() => {
+    if (!window.location.href.includes('login')) {
+      setShowHeader(true);
+    }
+
+    // eslint-disable-next-line
+  }, [window.location.href])
 
   return (
     <>
-      {currUser ? <Header /> : ''}
-
+      {showHeader ? <Header /> : ''}
 
       <main className='w-full md:max-w-[90vw] sm:w-[98vw] sm:text-center mx-auto'>
         <ToastContainer />

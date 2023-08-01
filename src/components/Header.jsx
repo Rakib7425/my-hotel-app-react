@@ -6,18 +6,14 @@ import { useAuth } from '../contexts/auth';
 
 const Header = () => {
     const [profileBtnValue, setProfileBtnValue] = useState('');
-    // const [isNavVisible, setIsNavVisible] = useState(true);
-    // const toggleNav = () => {
-    //     setIsNavVisible(!isNavVisible);
-    // };
+
     console.log(profileBtnValue);
     const navigate = useNavigate();
-    const { signOut } = useAuth();
+    const { signOut, authUser } = useAuth();
 
     useEffect(() => {
         try {
             if (profileBtnValue === 'logout') {
-                signOut();
                 navigate('/login')
                 toast.success('Successfully logged out')
             }
@@ -40,7 +36,7 @@ const Header = () => {
                 <Link to={'/contact'} className='mx-2 hover:scale-105 hover:text-slate-400'>Contact</Link>
                 <select className='bg-black text-white font-semibold rounded-full p-3 cursor-pointer ' onChange={(e) => { setProfileBtnValue(e.target.value) }}>Profile
                     <option value="profile" className='cursor-pointer text-2xl'>Profile</option>
-                    <option value="logout" className='cursor-pointer text-2xl'>Logout</option>
+                    <option value="logout" className='cursor-pointer text-2xl' onClick={signOut}>Logout</option>
                 </select>
 
 
