@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import DateRangeCalendarValue from './BasicDateRangeCalendar';
 
-const ModalData = ({ setShowModal, onClose, onRequest }) => {
+const ModalData = ({ setShowModal }) => {
 
     return (
         <motion.div
@@ -49,7 +49,7 @@ const ModalData = ({ setShowModal, onClose, onRequest }) => {
                                     />
                                 </div>
                                 <div>
-                                    {/* <DateRangeCalendarValue /> */}
+                                    <DateRangeCalendarValue />
                                 </div>
                                 <div className="mt-6">
                                     <input

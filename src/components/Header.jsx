@@ -17,6 +17,11 @@ const Header = () => {
                 <Link to={'/hotels'} className='mx-2 hover:scale-105 hover:text-slate-400'>Top-hotels</Link>
                 <Link to={'/about'} className='mx-2 hover:scale-105 hover:text-slate-400'>About</Link>
                 <Link to={'/contact'} className='mx-2 hover:scale-105 hover:text-slate-400'>Contact</Link>
+                <select className='bg-black text-white font-semibold rounded-full p-3'>Profile
+                    <option value="profile">Profile</option>
+                    <option value="logout">Logout</option>
+                </select>
+
 
                 {/* <button onClick={toggleNav}>Toggle</button> */}
             </div>

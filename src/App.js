@@ -4,8 +4,12 @@ import Header from './components/Header'
 import MainHome from './components/MainHome'
 import HotelPage from './components/HotelPage'
 import UseScrollToTop from './components/useScrollToTop'
+import { useAuth } from './contexts/auth'
 
 const App = () => {
+  const currUser = useAuth();
+  console.log(currUser);
+
   return (
     <>
       <Header />
