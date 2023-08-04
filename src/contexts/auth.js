@@ -21,7 +21,6 @@ export default function useFirebaseAuth() {
 
     const authStateChanged = (user) => {
         setIsLoading(true);
-
         if (!user) {
             clear();
             return;
@@ -31,11 +30,7 @@ export default function useFirebaseAuth() {
             Email: user.email,
             Name: user.displayName,
         })
-    };
 
-    const signOut = () => {
-        authSignOut(auth).then(() => clear())
-        // toast.success(`Successfully signed out`);
     };
 
     useEffect(() => {
@@ -44,6 +39,12 @@ export default function useFirebaseAuth() {
 
         // eslint-disable-next-line
     }, [])
+
+    const signOut = () => {
+        authSignOut(auth).then(() => clear())
+        // toast.success(`Successfully signed out`);
+    };
+
 
     return {
         authUser,
