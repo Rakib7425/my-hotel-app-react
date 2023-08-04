@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../../firebase/firebase'
+import { auth } from '../../firebase/firebase';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from 'firebase/auth';
@@ -19,8 +19,8 @@ const Login = () => {
     const navigate = useNavigate()
     const { authUser } = useAuth();
 
-    
-    
+
+
     useEffect(() => {
         if (authUser) {
             navigate('/')
