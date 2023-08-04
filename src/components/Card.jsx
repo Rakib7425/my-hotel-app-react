@@ -11,5 +11,4 @@ const Card = ({ img, hotelName, slug }) => {
     )
 }
 
-
 export default Card;

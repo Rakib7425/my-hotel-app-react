@@ -7,7 +7,7 @@ import { DateRangeCalendar } from '@mui/x-date-pickers-pro/DateRangeCalendar';
 
 export default function DateRangeCalendarValue() {
     let date = new Date()
-    let fDate = date.toLocaleDateString()
+    let fDate = date.toLocaleDateString();
     // console.log();
     const [value, setValue] = React.useState([
         dayjs(fDate),

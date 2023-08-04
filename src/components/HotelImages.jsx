@@ -12,4 +12,4 @@ const HotelImages = ({ data }) => {
     )
 }
 
-export default HotelImages
+export default HotelImages;
