@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Card = ({ img, hotelName, slug }) => {
+
     return (
         <div className='md:w-80 md:h-80 w-32 h-32 flex flex-col' title={hotelName} >
             <img src={img} alt="Im@ge" className='w-full h-full rounded-t-md' />
@@ -9,5 +10,6 @@ const Card = ({ img, hotelName, slug }) => {
         </div>
     )
 }
+
 
 export default Card;
