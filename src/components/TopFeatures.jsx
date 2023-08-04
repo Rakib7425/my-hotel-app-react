@@ -29,4 +29,4 @@ const TopFeatures = ({ data }) => {
 }
 
 
-export default TopFeatures
+export default TopFeatures;
