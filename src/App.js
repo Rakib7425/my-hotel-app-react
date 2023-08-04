@@ -10,7 +10,6 @@ import { ToastContainer } from 'react-toastify'
 import SignUp from './components/SignUp/SignUp'
 
 const App = () => {
-
   return (
     <>
       <Header />
@@ -33,4 +32,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
