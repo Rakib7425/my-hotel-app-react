@@ -10,4 +10,4 @@ const AboutThePlace = ({ data }) => {
     )
 }
 
-export default AboutThePlace
+export default AboutThePlace;

@@ -54,4 +54,4 @@ const HotelPage = () => {
     )
 }
 
-export default HotelPage
+export default HotelPage;
