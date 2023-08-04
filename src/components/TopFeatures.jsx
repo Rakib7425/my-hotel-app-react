@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 const TopFeatures = ({ data }) => {
+
     return (
         <>
             <span className='text-white text-2xl font-semibold my-12 underline'>Top Features</span>
@@ -25,5 +26,6 @@ const TopFeatures = ({ data }) => {
         </>
     )
 }
+
 
 export default TopFeatures

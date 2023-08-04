@@ -19,7 +19,8 @@ const Login = () => {
     const navigate = useNavigate()
     const { authUser } = useAuth();
 
-
+    
+    
     useEffect(() => {
         if (authUser) {
             navigate('/')
