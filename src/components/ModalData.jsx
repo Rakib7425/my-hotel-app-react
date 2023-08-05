@@ -3,9 +3,54 @@ import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import DateRangeCalendarValue from './BasicDateRangeCalendar';
 
+
 const ModalData = ({ setShowModal }) => {
 
-    const [no_of_adults_and_kids, setNo_of_adults_and_kids] = useState(4);
+    const [no_of_adults_and_kids, setNo_of_adults_and_kids] = useState(2);
+
+
+    const MyInputDivs = () => {
+
+        const div = () => {
+            return (
+                <div className="mt-6 flex">
+                    <div className='w-full'>
+
+                        <input
+                            className=" px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light w-[90%]"
+                            id="name"
+                            name="name"
+                            type="text"
+                            required=""
+                            placeholder="Name"
+                            aria-label="Name"
+                        />
+                    </div>
+
+                    <div className='max-w-[20%]'>
+                        <input
+                            className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                            id="age"
+                            name="age"
+                            type="number"
+                            required
+                            placeholder='Age'
+                        /></div>
+                </div>
+            )
+        }
+
+
+        for (let index = 0; index <= no_of_adults_and_kids; index++) {
+
+            console.log('hello');
+
+            div()
+            // return ()
+
+        }
+    }
+
 
     return (
         <motion.div
@@ -44,12 +89,7 @@ const ModalData = ({ setShowModal }) => {
                                         {/* <DateRangeCalendarValue /> */}
                                         <input type="date" name="date" id="date" className='w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light' />
                                     </div>
-                                    {
-                                        () => {
-                                            console.log('heheheh');
-                                        }
 
-                                    }
                                     <div>
                                         <input
                                             className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
@@ -59,8 +99,14 @@ const ModalData = ({ setShowModal }) => {
                                             required
                                             placeholder="No of Adults and kids"
                                             aria-label="no-of-adults-and-kids"
+                                            value={no_of_adults_and_kids}
+                                            onChange={(e) => setNo_of_adults_and_kids(e.target.value)}
                                         />
                                     </div>
+                                    {
+                                        <MyInputDivs />
+
+                                    }
                                 </div>
 
 
