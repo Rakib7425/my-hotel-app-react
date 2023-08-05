@@ -2,10 +2,14 @@ import React, { createContext, useContext, useState, useEffect } from 'react'
 import { onAuthStateChanged, signOut as authSignOut } from 'firebase/auth'
 import { auth } from '../firebase/firebase'
 // import { toast } from "react-toastify";
+import { getAuth } from "firebase/auth";
 
+const authh = getAuth();
+const userr = authh.currentUser;
+// console.log(userr);
 
 const AuthUserContext = createContext({
-    authUser: null,
+    authUser: '',
     isLoading: true,
 });
 
@@ -23,13 +27,20 @@ export default function useFirebaseAuth() {
         setIsLoading(true);
         if (!user) {
             clear();
-            return;
         }
-        setAuthUser({
-            userId: user.uid,
-            Email: user.email,
-            Name: user.displayName,
-        })
+
+        if (userr) {
+            setAuthUser({
+                userId: userr?.uid,
+                Email: userr?.email,
+                Name: userr?.displayName,
+            })
+
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/auth.user
+            // ...
+        }
+
 
     };
 
