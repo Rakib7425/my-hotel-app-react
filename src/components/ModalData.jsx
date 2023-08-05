@@ -6,7 +6,7 @@ import DateRangeCalendarValue from './BasicDateRangeCalendar';
 
 const ModalData = ({ setShowModal }) => {
 
-    const [no_of_adults_and_kids, setNo_of_adults_and_kids] = useState(2);
+    const [no_of_adults_and_kids, setNo_of_adults_and_kids] = useState('');
 
 
     const MyInputDivs = () => {
@@ -41,12 +41,12 @@ const ModalData = ({ setShowModal }) => {
         }
 
 
-        for (let index = 0; index <= no_of_adults_and_kids; index++) {
+        for (let i = 1; i <= no_of_adults_and_kids; i++) {
 
             console.log('hello');
 
             div()
-            // return ()
+            // return (div())
 
         }
     }
