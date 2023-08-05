@@ -1,24 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import DateRangeCalendarValue from './BasicDateRangeCalendar';
 
 const ModalData = ({ setShowModal }) => {
 
+    const [no_of_adults_and_kids, setNo_of_adults_and_kids] = useState(4);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="font-general-medium fixed inset-0 z-30 transition-all duration-500"
+            className="font-general-medium fixed inset-0 z-30 transition-all duration-500 "
         >
             {/* Modal Backdrop */}
             <div className="bg-filter bg-opacity-50 fixed inset-0 w-full h-full z-20 bg-gray-400"></div>
 
             {/* Modal Content */}
             <main className="flex flex-col items-center justify-center h-full w-full ">
-                <div className="modal-wrapper flex items-center z-30 rounded-lg">
-                    <div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative  bg-green-400">
+                <div className="modal-wrapper flex items-center z-30 rounded-lg ">
+                    <div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative  bg-green-400 overflow-y-scroll">
                         <div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
                             <h5 className=" text-primary-dark dark:text-primary-light text-xl">
                                 Select a date & Book your Stay -
@@ -38,19 +40,30 @@ const ModalData = ({ setShowModal }) => {
                                 className="max-w-xl m-4 text-left"
                             >
                                 <div className="">
-                                    <input
-                                        className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                                        id="name"
-                                        name="name"
-                                        type="text"
-                                        required=""
-                                        placeholder="Name"
-                                        aria-label="Name"
-                                    />
+                                    <div className='mt-6 mb-6'>
+                                        {/* <DateRangeCalendarValue /> */}
+                                        <input type="date" name="date" id="date" className='w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light' />
+                                    </div>
+                                    {
+                                        () => {
+                                            console.log('heheheh');
+                                        }
+
+                                    }
+                                    <div>
+                                        <input
+                                            className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                                            id="no-of-adults-and-kids"
+                                            name="no-of-adults-and-kids"
+                                            type="number"
+                                            required
+                                            placeholder="No of Adults and kids"
+                                            aria-label="no-of-adults-and-kids"
+                                        />
+                                    </div>
                                 </div>
-                                <div>
-                                    <DateRangeCalendarValue />
-                                </div>
+
+
                                 <div className="mt-6">
                                     <input
                                         className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
